@@ -2,6 +2,7 @@ import firebase_admin
 from firebase_admin import credentials
 from firebase_admin import firestore
 import math
+import json
 
 # 初始化 Firestore
 cred = credentials.Certificate('key.json')
@@ -85,3 +86,7 @@ for team_number, data in team_scores.items():
 # 輸出結果
 print("隊伍統計字典：")
 print(result)
+
+# 將結果寫入 JSON 檔案
+with open('team_stats.json', 'w') as f:
+    json.dump(result, f)
