@@ -1,2 +1,11 @@
 key.json
 out.json
+.env
+venv/
+# Ignore Python cache files
+__pycache__/
+# Ignore Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+# Ignore virtual environment directories
+# Ignore logs
+logs/
